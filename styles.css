@@ -1,0 +1,302 @@
+/* Basic Styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #79d7f4;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #414141;
+}
+
+header.carousel {
+    position: relative;
+    max-width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+header .carousel-item {
+    display: none;
+    height: 100%;
+}
+
+header .carousel-item.active {
+    display: block;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quote-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #1cb5e3;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.quote-section p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    font-style: italic;
+    color: black;
+    max-width: 600px;
+    margin: auto;
+}
+
+.property-search {
+    padding: 20px;
+    text-align: center;
+    background-color: transparent; /* Make the background transparent */
+}
+
+.search-container input, .search-container select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.categories, .featured-properties {
+    padding: 40px;
+    text-align: center;
+}
+
+.category-cards, .property-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-card, .property-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.category-card img, .property-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.category-card p, .property-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.property-card span {
+    display: block;
+    margin: 5px 0;
+    color: #555;
+}
+
+.category-card:hover, .property-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #087b9d;
+    color: black;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.email-link {
+    color: #8f1c05;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.carousel-indicators {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#propertyImage {
+    max-width: 80%; 
+    max-height: 400px; 
+    width: auto; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.category-card img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.property-search {
+    background-color: transparent; /* Ensure no background color */
+    padding: 20px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #050505;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+    margin-right: -5px;
+    background-color: transparent; /* Remove input field background */
+}
+
+.search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #087b9d;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #005f7f;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    header.carousel {
+        height: 40vh;
+    }
+
+    .quote-section {
+        padding: 15px;
+    }
+
+    .categories, .featured-properties {
+        padding: 20px;
+    }
+
+    .category-card, .property-card {
+        width: 30%;
+    }
+
+    .property-card span {
+        font-size: 1em;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .carousel-indicators {
+        bottom: 5px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+
+    #propertyImage {
+        max-width: 90%;
+        max-height: 300px;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-container input {
+        width: 70%;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+    .search-button {
+        width: 40%;
+        border-radius: 5px;
+    }
+}
