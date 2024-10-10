@@ -74,8 +74,8 @@ header img {
 }
 
 .category-card, .property-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #d4e5f7;
+    border: 1px solid #858282;
     border-radius: 5px;
     width: 250px;
     margin: 15px;
